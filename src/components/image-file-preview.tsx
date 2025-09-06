@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const ImagePreviewVariants = tv({
  base:`
-  rounded-lg <overflow-hidden></overflow-hidden>
+  rounded-lg overflow-hidden
  `
 })
 
