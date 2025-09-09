@@ -6,6 +6,7 @@ import Button from "./button";
 import PhotoSearch from "./photos-search";
 import Divider from "./divider";
 import PhotoNewDialog from "../contexts/photos/components/photo-new-dialog";
+import AlbumNewDialog from "../contexts/photos/album/components/album-new-dialog";
 
 interface MainHeaderProps extends React.ComponentProps< typeof Container> {}
 
@@ -33,7 +34,11 @@ export default function MainHeader({
     <PhotoNewDialog trigger={
      <Button>Nova foto</Button>
     }/>
-   <Button variant="secondary">Criar álbum</Button>
+
+    <AlbumNewDialog trigger={
+     <Button variant="secondary">Criar álbum</Button>
+    }/>
+
    </div>
   </Container>
  )

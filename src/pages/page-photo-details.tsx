@@ -16,7 +16,7 @@ export default function PagePhotoDetails(){
   id: "123",
   title: "Olá mundo!",
   imageId: "portrait-tower.png",
-  albuns: [
+  albums: [
    {id: "2421", title: "Album 1"},
    {id: "3421", title: "Album 2"},
    {id: "8421", title: "Album 3"},

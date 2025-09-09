@@ -21,7 +21,7 @@ export default function PageHome() {
       id: "123",
       title: "Olá mundo!",
       imageId: "portrait-tower.png",
-      albuns: [
+      albums: [
        {id: "3421", title: "album 1"},
        {id: "3821", title: "album 2"},
        {id: "3621", title: "album 3"},
