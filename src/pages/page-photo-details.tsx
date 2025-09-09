@@ -6,11 +6,12 @@ import Skeleton from "../components/skeleton";
 import PhotosNavigator from "../contexts/photos/components/photos-navigator";
 import ImagePreview from "../components/image-file-preview";
 import Button from "../components/button";
+import AlbumsListSelectable from "../contexts/photos/album/components/albums-list-selectable";
 
 export default function PagePhotoDetails(){
  const {id} = useParams()
  // Apenas para fazer o test do mock
- const isLoadingPhoto = true;
+ const isLoadingPhoto = false;
  const photo = {
   id: "123",
   title: "Olá mundo!",
@@ -36,7 +37,7 @@ export default function PagePhotoDetails(){
     <PhotosNavigator loading={isLoadingPhoto}/>
    </header>
 
-   <div className="grid grid-cols-[21rem] gap-24">
+   <div className="grid grid-cols-[21rem_1fr] gap-24">
     <div className="flex flex-col gap-3">
      {!isLoadingPhoto ? (
       <ImagePreview 
@@ -55,6 +56,16 @@ export default function PagePhotoDetails(){
        <Skeleton className="w-20 h-10"/>
       }
      </div>
+    </div>
+
+    <div className="py-3 ">
+     <Text as="h3" variant="heading-medium" className="mb-7">Albuns</Text>
+      <AlbumsListSelectable photo={photo} albums={[
+       {id: "2421", title: "Natureza"},
+       {id: "3421", title: "Paisagem"},
+       {id: "8421", title: "Mato"},
+      ]} loading={isLoadingPhoto}
+      />
     </div>
    </div>
   </Container>
